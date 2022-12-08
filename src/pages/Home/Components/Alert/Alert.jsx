@@ -24,36 +24,6 @@ export default function Alert() {
         <div className="message">
           <h6>Consulta mi Stack tecnológico y mis Proyectos</h6>
           <AlertButton/>
-          {/* <Button
-            variant="contained"
-            //color="primary"
-            type="submit"
-            //onClick={sendMail}
-            endIcon={<SendIcon />}
-            style={{
-              borderRadius: 50,
-              backgroundColor: "black",
-              color: "#87CEEB",
-              marginRight: "5px",
-            }}
-          >
-            Stack
-          </Button>
-          <Button
-            variant="contained"
-            //color="primary"
-            type="submit"
-            //onClick={sendMail}
-            endIcon={<SendIcon />}
-            style={{
-              borderRadius: 50,
-              backgroundColor: "black",
-              color: "#87CEEB",
-              // marginTop:'0px'
-            }}
-          >
-            Proyectos
-          </Button> */}
         </div>
       ) : (
         <div></div>

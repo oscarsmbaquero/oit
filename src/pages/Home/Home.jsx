@@ -7,8 +7,8 @@ const Home = () => {
     <>
     <div className='firstMensaje'>
       <FirstText/>
-    </div>
-    <div className='alert'>
+    {/* </div>
+    <div className='alert'> */}
       <Alert/>
     </div>
     
