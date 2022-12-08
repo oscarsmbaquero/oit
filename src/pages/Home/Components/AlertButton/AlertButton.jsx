@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Button } from "@material-ui/core";
-import SendIcon from "@material-ui/icons/Send";
+import { Button } from "react-bootstrap";
+
 
 
 export default function Alert() {
@@ -21,51 +21,9 @@ export default function Alert() {
     <div>
       {isShown ? (
         <div className="message">
-        <Button
-                variant="contained"
-                //color="primary"
-                type="submit"
-                //onClick={sendMail}
-                endIcon={<SendIcon />}
-                style={{
-                  borderRadius: 50,
-                  backgroundColor: "black",
-                  color: "white",
-                  marginRight:'5px'
-                }}
-              >
-                Stack
-              </Button>
-              <Button
-                variant="contained"
-                //color="primary"
-                type="submit"
-                //onClick={sendMail}
-                endIcon={<SendIcon />}
-                style={{
-                  borderRadius: 50,
-                  backgroundColor: "black",
-                  color: "white",
-                  // marginTop:'0px'
-                }}
-              >
-                Proyectos
-              </Button>
-              <Button
-                variant="contained"
-                //color="primary"
-                type="submit"
-                //onClick={sendMail}
-                endIcon={<SendIcon />}
-                style={{
-                  borderRadius: 50,
-                  backgroundColor: "black",
-                  color: "white",
-                  // marginTop:'0px'
-                }}
-              >
-                CV
-              </Button>
+        <Button>Stack</Button>
+        <Button>Stack</Button>
+        <Button>Stack</Button>
         </div>
       ) : (
         <div></div>
