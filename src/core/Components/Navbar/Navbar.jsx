@@ -1,13 +1,17 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
+import text from '../../../assets/images/logoText.png';
 const Menu = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="/">OIT</Navbar.Brand>
+        <Navbar.Brand href="/">
+          OIT
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mx-auto" >
+          <Nav.Link href="/stack">Stack</Nav.Link>
           <Nav.Link href="/contact">Contact</Nav.Link>
             <Nav.Link href="/cv">CV</Nav.Link>
             <NavDropdown title="Projects" id="collasible-nav-dropdown">

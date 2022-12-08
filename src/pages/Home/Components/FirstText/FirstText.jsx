@@ -12,11 +12,9 @@ const FirstText = () => {
         <div class="main-content">
           <div class="title-content">
             <p class="content-body">
-              Es un placer darles la bienvenida, a mi portafolio electrónico en
-              el cual encontraras información sobre mi formación académica, mi
-              experiencia laboral y sobre los trabajos que he realizado de
-              manera individual y colectiva.
-              Para cualquier duda o consulta, rellena el formulario y me pondré 
+              Bienvenid@, a mi portafolio donde encontrarás información sobre mi formación académica, mi
+              experiencia laboral y sobre los trabajos que he realizado.
+              Para cualquier duda, consulta o contacto rellena el formulario y me pondré 
               en contacto contigo lo antes posible.
               ¡¡¡Gracias!!!
             </p>
