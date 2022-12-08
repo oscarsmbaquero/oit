@@ -21,9 +21,47 @@ export default function Alert() {
     <div>
       {isShown ? (
         <div className="message">
-        <Button>Stack</Button>
-        <Button>Stack</Button>
-        <Button>Stack</Button>
+        <Button
+                variant="contained"
+                //color="primary"
+                type="submit"
+                //onClick={sendMail}
+                style={{
+                  borderRadius: 50,
+                  backgroundColor: "black",
+                  color: "white",
+                  marginRight:'5px'
+                }}
+              >
+                Stack
+              </Button>
+              <Button
+                variant="contained"
+                //color="primary"
+                type="submit"
+                //onClick={sendMail}
+                style={{
+                  borderRadius: 50,
+                  backgroundColor: "black",
+                  color: "white",
+                  marginRight:'5px'
+                }}
+              >
+                Projectos
+              </Button> <Button
+                variant="contained"
+                //color="primary"
+                type="submit"
+                //onClick={sendMail}
+                style={{
+                  borderRadius: 50,
+                  backgroundColor: "black",
+                  color: "white",
+                  marginRight:'5px'
+                }}
+              >
+                CV
+              </Button>
         </div>
       ) : (
         <div></div>
