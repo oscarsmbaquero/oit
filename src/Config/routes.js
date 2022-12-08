@@ -4,10 +4,6 @@ import Cv from '../pages/Cv/Cv';
 import Home from '../pages/Home/Home';
 import Stack from '../pages/Stack/Stack';
 
-
-
-
-
 const routes = [
   {
     path: "/",
