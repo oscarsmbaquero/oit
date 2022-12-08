@@ -13,6 +13,7 @@ const Menu = () => {
           <Nav className="mx-auto" >
           <Nav.Link href="/stack">Stack</Nav.Link>
           <Nav.Link href="/contact">Contact</Nav.Link>
+          <Nav.Link href="/projects">Projects</Nav.Link>
             <Nav.Link href="/cv">CV</Nav.Link>
             <NavDropdown title="Projects" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>

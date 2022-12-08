@@ -3,6 +3,7 @@ import Contact from '../pages/Contact/Contact';
 import Cv from '../pages/Cv/Cv';
 import Home from '../pages/Home/Home';
 import Stack from '../pages/Stack/Stack';
+import Projects from '../pages/Projects/Proyects';
 
 const routes = [
   {
@@ -20,6 +21,10 @@ const routes = [
   {
     path: "/stack",
     element: <Stack/>,
+  },
+  {
+    path: "/projects",
+    element: <Projects/>,
   },
   
   
