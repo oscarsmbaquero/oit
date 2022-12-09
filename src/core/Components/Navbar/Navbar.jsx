@@ -15,7 +15,7 @@ const Menu = () => {
           <Nav.Link href="/contact">Contact</Nav.Link>
           <Nav.Link href="/projects">Projects</Nav.Link>
             <Nav.Link href="/cv">CV</Nav.Link>
-            <NavDropdown title="Projects" id="collasible-nav-dropdown">
+            {/* <NavDropdown title="Projects" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
@@ -25,7 +25,7 @@ const Menu = () => {
               <NavDropdown.Item href="#action/3.4">
                 Separated link
               </NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
           </Nav>
           <Navbar.Brand href="/">Acceso Personal</Navbar.Brand>
           {/* <Nav>
