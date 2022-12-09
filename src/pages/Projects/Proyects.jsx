@@ -17,6 +17,7 @@ import logo from '../../assets/images/logo.jpg';
 // import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 // import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { SWContext } from "../../context/context";
+import { MDBIcon } from "mdb-react-ui-kit";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -37,7 +38,9 @@ export default function RecipeReviewCard() {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
   return (
     <div>
       <Grid container spacing={2}>
@@ -84,23 +87,36 @@ export default function RecipeReviewCard() {
               <Typography variant="body2" color="text.secondary">
                 {item.description}
               </Typography>
+                            
+            </CardContent>
+            <CardActions 
+            sx={{justifyContent:'space-between'}}
+            >
               {item.stack.map((i) =>(
                 <Avatar
-                    sx={{ width: 24, height: 24 ,flexDirection: 'row',flexWrap: 'wrap' }}
+                    sx={{ width: 24, 
+                          height: 24, 
+                          flexDirection: 'row',
+                          flexWrap: 'wrap'}}
                     aria-label="recipe"
                     src={i.image}
                   ></Avatar>
-             
               ))}
-              
-            </CardContent>
-            <CardActions disableSpacing>
               <IconButton aria-label="add to favorites">
                 <FavoriteIcon />
               </IconButton>
               <IconButton aria-label="share">
                 <ShareIcon />
               </IconButton>
+              <div className="text-warning mb-1 me-2">
+                  <MDBIcon fas icon="star" />
+                  <MDBIcon fas icon="star" />
+                  <MDBIcon fas icon="star" />
+                  <MDBIcon fas icon="star" />
+                  <MDBIcon fas icon="star" />
+                </div>
+                <span>{getRandomInt(25)}</span>
+                
               <ExpandMore
                 expand={expanded}
                 onClick={handleExpandClick}
