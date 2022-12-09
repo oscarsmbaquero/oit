@@ -102,12 +102,12 @@ export default function RecipeReviewCard() {
                     src={i.image}
                   ></Avatar>
               ))}
-              <IconButton aria-label="add to favorites">
+              {/* <IconButton aria-label="add to favorites">
                 <FavoriteIcon />
               </IconButton>
               <IconButton aria-label="share">
                 <ShareIcon />
-              </IconButton>
+              </IconButton> */}
               <div className="text-warning mb-1 me-2">
                   <MDBIcon fas icon="star" />
                   <MDBIcon fas icon="star" />
