@@ -1,12 +1,14 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
 import text from '../../../assets/images/logoText.png';
+import Avatar from "@mui/material/Avatar";
+import logo4 from "../../../assets/images/logo.jpg"
 const Menu = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
         <Navbar.Brand href="/">
-          OIT
+        <Avatar alt="Remy Sharp" src={logo4} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

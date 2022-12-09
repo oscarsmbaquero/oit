@@ -79,7 +79,7 @@ export default function RecipeReviewCard() {
                       <MDBIcon fas icon="star" />
                       <MDBIcon fas icon="star" />
                     </div>
-                    <span>{getRandomInt(25)}</span>
+                    <span>{getRandomInt(45)}</span>
                   </>
                 }
                 title={item.title}
