@@ -14,6 +14,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import { Grid } from "@mui/material";
 import logo from "../../assets/images/logo.jpg";
+import Badge from "react-bootstrap/Badge";
 // import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 // import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { SWContext } from "../../context/context";
@@ -70,14 +71,16 @@ export default function RecipeReviewCard() {
                   ></Avatar>
                 }
                 action={
-                  <IconButton aria-label="settings">
-                    <a href="" className="me-4 text-reset">
-                  <MDBIcon color="secondary" fab icon="github" />
-                </a>
-                <a href="" className="me-4 text-reset">
-                <MDBIcon color='primary' fab icon='google' />
-                </a>
-                  </IconButton>
+                  <>
+                    <div className="text-warning mb-1 me-2">
+                      <MDBIcon fas icon="star" />
+                      <MDBIcon fas icon="star" />
+                      <MDBIcon fas icon="star" />
+                      <MDBIcon fas icon="star" />
+                      <MDBIcon fas icon="star" />
+                    </div>
+                    <span>{getRandomInt(25)}</span>
+                  </>
                 }
                 title={item.title}
                 subheader={item.fecha}
@@ -93,7 +96,8 @@ export default function RecipeReviewCard() {
                   {item.description}
                 </Typography>
               </CardContent>
-              <CardActions sx={{ justifyContent: "space-between" }}>
+              <CardActions sx={{ justifyContent: "space-evenly" }}>
+              <Badge bg="success" text="bold">Stack:</Badge>
                 {item.stack.map((i) => (
                   <Avatar
                     sx={{
@@ -106,18 +110,24 @@ export default function RecipeReviewCard() {
                     src={i.image}
                   ></Avatar>
                 ))}
-                {/* <IconButton aria-label="share">
-                <ShareIcon />
-              </IconButton> */}
-                <div className="text-warning mb-1 me-2">
-                  <MDBIcon fas icon="star" />
-                  <MDBIcon fas icon="star" />
-                  <MDBIcon fas icon="star" />
-                  <MDBIcon fas icon="star" />
-                  <MDBIcon fas icon="star" />
-                </div>
-                <span>{getRandomInt(25)}</span>
-                
+                <Badge bg="primary" text="bold">Links:</Badge>
+                {item.links.map((o) => (
+                 
+                    <IconButton aria-label="settings">
+                      {o.name === "Git" && (
+                        <a href={o.linkGit} >
+                          <MDBIcon color="secondary" fab icon="github" />
+                        </a>
+                      )}
+                      {o.name === "Vercel" && (
+                        <a href={o.linkVer} >
+                          <MDBIcon color="danger" fab icon="google" />
+                        </a>
+                      )}
+                    </IconButton>
+                  
+                ))}
+
                 <ExpandMore
                   expand={expanded}
                   onClick={handleExpandClick}
