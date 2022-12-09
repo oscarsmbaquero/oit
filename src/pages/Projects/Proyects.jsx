@@ -1,4 +1,4 @@
-import * as React from "react";
+import  React,{useContext} from "react";
 import { styled } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
@@ -13,8 +13,10 @@ import { red } from "@mui/material/colors";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import { Grid } from "@mui/material";
+import logo from '../../assets/images/logo.jpg';
 // import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 // import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { SWContext } from "../../context/context";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -28,8 +30,10 @@ const ExpandMore = styled((props) => {
 }));
 
 export default function RecipeReviewCard() {
+  const { stack } = useContext(SWContext);
   const [expanded, setExpanded] = React.useState(false);
 
+  console.log(stack,'stack');
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
@@ -37,6 +41,7 @@ export default function RecipeReviewCard() {
   return (
     <div>
       <Grid container spacing={2}>
+      {stack.map((item) => (
         <Grid item xs={12} md={6} lg={4}>
           <Card
             elevation={5}
@@ -44,7 +49,7 @@ export default function RecipeReviewCard() {
               borderRadius: "4px",
               justifyContent: "flex-start",
               flex: "1 0 auto",
-              marginLeft: "20px",
+              // marginLeft: "5px",
               marginTop: "10px",
               flexDirection: "column",
               flexWrap: "wrap",
@@ -54,31 +59,40 @@ export default function RecipeReviewCard() {
             }}
           >
             <CardHeader
-              avatar={
-                <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                  R
-                </Avatar>
-              }
+              avatar={               
+                  <Avatar
+                    sx={{ bgcolor: red[500] }}
+                    aria-label="recipe"
+                    src={logo}
+                  ></Avatar>
+                }
               action={
                 <IconButton aria-label="settings">
                   {/* <MoreVertIcon /> */}
                 </IconButton>
               }
-              title="Shrimp and Chorizo Paella"
-              subheader="September 14, 2016"
+              title={item.title}
+              subheader={item.fecha}
             />
             <CardMedia
               component="img"
               height="194"
-              image="/static/images/cards/paella.jpg"
-              alt="Paella dish"
+              image={item.image}
+              alt={item.image}
             />
             <CardContent>
               <Typography variant="body2" color="text.secondary">
-                This impressive paella is a perfect party dish and a fun meal to
-                cook together with your guests. Add 1 cup of frozen peas along
-                with the mussels, if you like.
+                {item.description}
               </Typography>
+              {item.stack.map((i) =>(
+                <Avatar
+                    sx={{ width: 24, height: 24 ,flexDirection: 'row',flexWrap: 'wrap' }}
+                    aria-label="recipe"
+                    src={i.image}
+                  ></Avatar>
+             
+              ))}
+              
             </CardContent>
             <CardActions disableSpacing>
               <IconButton aria-label="add to favorites">
@@ -131,6 +145,7 @@ export default function RecipeReviewCard() {
             </Collapse>
           </Card>
         </Grid>
+      ))}
       </Grid>
     </div>
   );
