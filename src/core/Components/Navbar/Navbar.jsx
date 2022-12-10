@@ -11,15 +11,17 @@ const Menu = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="/" className="logo">
-        OIT
-        </Navbar.Brand>
+        {/* <Navbar.Brand href="/" className="logo"> */}
+        <I18n/>
+        {/* </Navbar.Brand> */}
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mx-auto" >
+          <Nav.Link href="/"><FormattedMessage id="app.home"/></Nav.Link>          
           <Nav.Link href="/contact"><FormattedMessage id="app.contact"/></Nav.Link>
           <Nav.Link href="/projects"><FormattedMessage id="app.projects"/></Nav.Link>
             <Nav.Link href="/cv">CV</Nav.Link>
+            {/* <Nav.Link href="/stack">Stack</Nav.Link> */}
             {/* <NavDropdown title="Projects" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -36,7 +38,7 @@ const Menu = () => {
           <Nav>
           
             <Nav.Link eventKey={2} href="#memes">
-            <I18n/>
+            
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

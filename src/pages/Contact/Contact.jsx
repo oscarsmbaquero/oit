@@ -10,6 +10,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
  import Swal from "sweetalert2";
 import emailjs from '@emailjs/browser';
+import { IntlProvider, FormattedMessage } from "react-intl";
 
 
 function Copyright(props) {
@@ -80,7 +81,7 @@ export default function SignUp() {
               required
               fullWidth
               name="mail"
-              label="Mail"
+              label=<FormattedMessage id="app.mail"/>
               type="mail"
               id="mail"
             />
@@ -89,7 +90,7 @@ export default function SignUp() {
               required
               fullWidth
               name="name"
-              label="Name"
+              label=<FormattedMessage id="app.name"/>
               type="text"
               id="name"
             />
@@ -98,7 +99,7 @@ export default function SignUp() {
               required
               fullWidth
               name="question"
-              label="Text"
+              label=<FormattedMessage id="app.comments"/>
               type="text"
               id="password"
             />
@@ -108,7 +109,7 @@ export default function SignUp() {
               variant="contained"
               sx={{ mt: 3, mb: 0 }}
             >
-              Enviar
+              <FormattedMessage id="app.send"/>
             </Button>
             <Copyright sx={{ mt: 8, mb: 4 }} />
           </Box>
