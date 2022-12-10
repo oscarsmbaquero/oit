@@ -5,14 +5,13 @@ import "./I18n.scss";
 import spain from "../../assets/banderas/spain.png";
 import english from "../../assets/banderas/english.jpg";
 import portuguese from "../../assets/banderas/portugal.jpg";
+import ikurriña from "../../assets/banderas/ikurriña.jpg";
 //import { makeStyles } from "@material-ui/core/styles";
 
 
 
 const I18n = () => {
   const { locale, selectLanguage } = useContext(ContextI18n);
-  
-  
 
   return (
     <div class="i18n">
@@ -47,6 +46,18 @@ const I18n = () => {
           <Avatar
             sx={{ width: 24, height: 24 }}
             src={portuguese}
+            //  sx={{ bgcolor: red[500] }}
+            aria-label="recipe"
+          ></Avatar>
+        </IconButton>
+      )}
+      {locale === "eu" ? (
+        ""
+      ) : (
+        <IconButton onClick={() => selectLanguage("eu")}>
+          <Avatar
+            sx={{ width: 24, height: 24 }}
+            src={ikurriña}
             //  sx={{ bgcolor: red[500] }}
             aria-label="recipe"
           ></Avatar>

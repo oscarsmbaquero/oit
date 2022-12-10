@@ -11,7 +11,8 @@ import routes from "./Config/routes";
 
 import Spanish from "../src/lang/es.json";
 import English from "../src/lang/en.json";
- import Portuguese from "../src/lang/pt.json"
+import Portuguese from "../src/lang/pt.json";
+import EusKara from "../src/lang/eu.json";
 import I18n from "./context/i18n/I18n";
 
 export const ContextI18n = React.createContext();
@@ -26,7 +27,9 @@ function App() {
       setMessages(Spanish);
     } else if(locale === "en"){
       setMessages(English);
-    } else {
+    } else  if(locale === "eu"){
+      setMessages(EusKara);
+    }else{
       setMessages(Portuguese);
     }
   }, [locale]);
@@ -37,6 +40,8 @@ function App() {
       setMessages(Spanish);
     } else if (newLocale === "en"){
       setMessages(English);
+    } else if (newLocale === "eu"){
+      setMessages(EusKara);
     } else {
       setMessages(Portuguese);
     }

@@ -48,7 +48,7 @@ export default function SignUp() {
         .then((response) => console.log(response));
       Swal.fire({
         title: "Success!",
-        text: " Gracias por la reserva. Le confirmaremos su reserva lo antes posible",
+        text: " Mensaje enviado. Gracias!!!!!",
         icon: "success",
         confirmButtonText: "Ok",
       });
@@ -74,9 +74,9 @@ export default function SignUp() {
             component="form"
             onSubmit={sendMail}
             noValidate
-            sx={{ mt: 1 }}
+            sx={{ mt: 15 }}
           >
-            <TextField
+            <TextField 
               margin="normal"
               required
               fullWidth
@@ -107,11 +107,15 @@ export default function SignUp() {
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 0 }}
+              sx={{
+                 mt: 2,
+                 mb: 0,
+                 borderRadius:8,
+                 color:'black' }}
             >
               <FormattedMessage id="app.send"/>
             </Button>
-            <Copyright sx={{ mt: 8, mb: 4 }} />
+            {/* <Copyright sx={{ mt: 8, mb: 4 }} /> */}
           </Box>
         </Box>
       </Container>

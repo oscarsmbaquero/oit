@@ -11,11 +11,6 @@ import logo4 from "../../../assets/images/logo.jpg";
 import { useContext } from "react";
 const Menu = () => {
 
- 
-
-  
-
-
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
