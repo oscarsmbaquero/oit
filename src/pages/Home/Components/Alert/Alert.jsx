@@ -22,7 +22,7 @@ export default function Alert() {
     <div>
       {isShown ? (
         <div className="message">
-          <h6>Consulta mi Stack tecnológico y mis Proyectos</h6>
+          <h6>Consulta mis proyectos y descarga mi C.V.</h6>
           <AlertButton/>
         </div>
       ) : (

@@ -21,7 +21,7 @@ export default function Alert() {
     <div>
       {isShown ? (
         <div className="message">
-        <Button
+        {/* <Button
                 variant="contained"
                 //color="primary"
                 type="submit"
@@ -34,7 +34,7 @@ export default function Alert() {
                 }}
               >
                 Stack
-              </Button>
+              </Button> */}
               <Button
                 variant="contained"
                 //color="primary"

@@ -1,14 +1,16 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import './Navbar.scss';
+
 import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
 import text from '../../../assets/images/logoText.png';
 import Avatar from "@mui/material/Avatar";
-import logo4 from "../../../assets/images/logo.jpg"
+import logo4 from "../../../assets/images/logo.jpg";
 const Menu = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
         <Navbar.Brand href="/">
-        <Avatar alt="Remy Sharp" src={logo4} />
+        <Avatar alt="Remy Sharp" src={logo4} className="logo"/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -28,14 +30,14 @@ const Menu = () => {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown> */}
+        
           </Nav>
-          <Navbar.Brand href="/">Acceso Personal</Navbar.Brand>
-          {/* <Nav>
-            <Nav.Link href="#deets">Area Personal</Nav.Link>
+          <Nav>
+          
             <Nav.Link eventKey={2} href="#memes">
-              Dank memes
+              OIT
             </Nav.Link>
-          </Nav> */}
+          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>

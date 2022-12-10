@@ -97,7 +97,7 @@ export default function SignUp() {
             noValidate
             sx={{ mt: 1 }}
           >
-          <Avatar alt="Remy Sharp" src={logo4} />
+          
             <TextField
               margin="normal"
               required
@@ -105,7 +105,6 @@ export default function SignUp() {
               id="email"
               label="Email Address"
               name="email"
-              // autoComplete="email"
               onChange={handleRegisterForm}
               autoFocus
             />
@@ -114,53 +113,22 @@ export default function SignUp() {
               required
               fullWidth
               name="name"
-              label="Name & Surname"
+              label="Name"
               type="name"
               id="name"
               onChange={handleRegisterForm}
               
             />
-            {/* <TextField
-              margin="normal"
-              required
-              fullWidth
-              name="surname"
-              label="Surname"
-              type="surname"
-              id="surname"
-              onChange={handleRegisterForm}
-            /> */}
             <TextField
               margin="normal"
               required
               fullWidth
               name="password"
-              label="Password"
+              label="Text"
               type="text"
               id="password"
               onChange={handleRegisterForm}
-              //autoComplete="current-password"
             />
-            {/* <Select
-            sx={{minWidth: 350,
-                 margin:'20px'
-               }}
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              //value={'rol'}
-              label="account_type"
-              name="account_type"
-              onChange={handleRegisterForm}
-            >
-              <MenuItem value={'Tecnico'}>Tecnico</MenuItem>
-              <MenuItem value={'Dispatch'}>Dispatch</MenuItem>
-              
-            </Select> */}
-            {/* <input type="file" alt="" name="image" className='edit__input'/> */}
-            {/* <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            /> */}
             <Button
               type="submit"
               fullWidth
@@ -169,18 +137,6 @@ export default function SignUp() {
             >
               Enviar
             </Button>
-            {/* <Grid container>
-              <Grid item xs>
-                <Link href="#" variant="body2">
-                  Olvidaste contraseña?
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link href="/user/login" variant="body2">
-                  {"Ya tienes cuenta? LogIn"}
-                </Link>
-              </Grid>
-            </Grid> */}
             <Copyright sx={{ mt: 8, mb: 4 }} />
           </Box>
         </Box>
