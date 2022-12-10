@@ -123,11 +123,14 @@ export default function RecipeReviewCard() {
                     <IconButton aria-label="settings"  
                     sx={{ 
                     border: 1,
-                    backgroundColor:"#80deea"
+                    //borderColor:"red",
+                    borderRadius:2,
+                    
+                    backgroundColor:"#80deea",
                      }}>
                       {o.name === "Git" && (
                         <a href={o.linkGit} >
-                          <MDBIcon color="secondary" fab icon="github" />
+                          <MDBIcon color="dark" fab icon="github" />
                         </a>
                       )}
                       {o.name === "Vercel" && (
