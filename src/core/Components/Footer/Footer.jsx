@@ -42,9 +42,9 @@ export default function App() {
           </a>
         </div>
       </section>
-      <div className='text-center p-4' style={{color:'whitesmoke' }}>
+      {/* <div className='text-center p-4' style={{color:'whitesmoke' }}>
       <Copyright />
-      </div>
+      </div> */}
     </MDBFooter>
   );
 }
