@@ -120,7 +120,11 @@ export default function RecipeReviewCard() {
                 <Badge bg="primary" text="bold">Links:</Badge>
                 {item.links.map((o) => (
                  
-                    <IconButton aria-label="settings">
+                    <IconButton aria-label="settings"  
+                    sx={{ 
+                    border: 1,
+                    backgroundColor:"#80deea"
+                     }}>
                       {o.name === "Git" && (
                         <a href={o.linkGit} >
                           <MDBIcon color="secondary" fab icon="github" />
