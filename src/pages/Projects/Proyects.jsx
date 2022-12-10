@@ -1,4 +1,5 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import axios from "axios";
 import { styled } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
@@ -10,15 +11,13 @@ import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import { red } from "@mui/material/colors";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShareIcon from "@mui/icons-material/Share";
 import { Grid } from "@mui/material";
 import logo from "../../assets/images/logo.jpg";
 import Badge from "react-bootstrap/Badge";
 // import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 // import MoreVertIcon from '@mui/icons-material/MoreVert';
-import { SWContext } from "../../context/context";
 import { MDBIcon } from "mdb-react-ui-kit";
+const BASEURL = "https://62852cc03060bbd347460bff.mockapi.io/";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -32,8 +31,16 @@ const ExpandMore = styled((props) => {
 }));
 
 export default function RecipeReviewCard() {
-  const { stack } = useContext(SWContext);
+  const [stack, setStack] = useState([]);  
   const [expanded, setExpanded] = React.useState(false);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const res = await axios.get(`${BASEURL}/oitStack`);
+      setStack(res.data);
+    };
+    fetchProjects();
+  }, []);
 
   console.log(stack, "stack");
   const handleExpandClick = () => {

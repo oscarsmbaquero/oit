@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { IntlProvider, FormattedMessage } from "react-intl";
 //import logo from "../../assets/images/cartas/cartaNormal.jpg";
 import "./Alert.scss";
 import AlertButton from "../AlertButton/AlertButton";
@@ -22,7 +23,7 @@ export default function Alert() {
     <div>
       {isShown ? (
         <div className="message">
-          <h6>Consulta mis proyectos y descarga mi C.V.</h6>
+          <h6><FormattedMessage id="app.alert"/></h6>
           <AlertButton/>
         </div>
       ) : (

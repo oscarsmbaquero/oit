@@ -13,7 +13,7 @@ export default function App() {
         {...props}
       >
         {"Copyright © "}
-        <Link color="inherit" href="https://github.com/oscarsmbaquero">
+        <Link href="https://github.com/oscarsmbaquero">
          OIT -Soluciones y Servicios Tecnológicos.
         </Link>{" "}
         {new Date().getFullYear()}

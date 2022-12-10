@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
+import { IntlProvider, FormattedMessage } from "react-intl";
 
 
 
@@ -47,7 +48,7 @@ export default function Alert() {
                   marginRight:'5px'
                 }}
               >
-                Projectos
+                <FormattedMessage id="app.projects"/>
               </Button> <Button
                 variant="contained"
                 //color="primary"

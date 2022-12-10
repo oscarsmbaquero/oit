@@ -1,5 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import './Navbar.scss';
+import I18n from '../../../context/i18n/I18n';
+import { IntlProvider, FormattedMessage } from "react-intl";
 
 import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
 import text from '../../../assets/images/logoText.png';
@@ -15,9 +17,8 @@ const Menu = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mx-auto" >
-          <Nav.Link href="/stack">Stack</Nav.Link>
-          <Nav.Link href="/contact">Contact</Nav.Link>
-          <Nav.Link href="/projects">Projects</Nav.Link>
+          <Nav.Link href="/contact"><FormattedMessage id="app.contact"/></Nav.Link>
+          <Nav.Link href="/projects"><FormattedMessage id="app.projects"/></Nav.Link>
             <Nav.Link href="/cv">CV</Nav.Link>
             {/* <NavDropdown title="Projects" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -35,7 +36,7 @@ const Menu = () => {
           <Nav>
           
             <Nav.Link eventKey={2} href="#memes">
-              
+            <I18n/>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
