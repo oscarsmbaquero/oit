@@ -1,6 +1,7 @@
 import React from "react";
 import "./FirstText.scss";
-import logo from "../../../../assets/images/logo.jpg";
+// import logo from "../../../../assets/images/logo.jpg";
+// import Avatar from "@mui/material/Avatar";
 
 const FirstText = () => {
   return (
@@ -8,18 +9,13 @@ const FirstText = () => {
       <div class="star-wars-intro">
         <h2 class="main-logo"></h2>
         <p class="intro-text"></p>
-
         <div class="main-content">
           <div class="title-content">
             <p class="content-body">
-              Bienvenid@, a mi portafolio donde encontrarás información sobre mi formación académica, mi
-              experiencia laboral y sobre los trabajos que he realizado.
+              Bienvenid@, a mi portfolio donde encontrarás información sobre mi formación académica, mi
+              experiencia laboral y mis proyectos.
               Para cualquier duda, consulta o contacto rellena el formulario y me pondré 
-              en contacto contigo lo antes posible.
-              ¡¡¡Gracias!!!
-            </p>
-            <p class="content-header">
-              <img className="logo" src={logo} alt="logo"></img>
+              en contacto contigo a la mayor brevedad posible.¡¡¡Gracias!!!
             </p>
           </div>
         </div>
