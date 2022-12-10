@@ -7,15 +7,11 @@ import english from "../../assets/banderas/english.jpg";
 import portuguese from "../../assets/banderas/portugal.jpg";
 //import { makeStyles } from "@material-ui/core/styles";
 
-// const useStyles = makeStyles(theme => ({
-//   customHoverFocus: {
-//     "&:hover, &.Mui-focusVisible": { backgroundColor: "yellow" }
-//   }
-// }));
+
 
 const I18n = () => {
   const { locale, selectLanguage } = useContext(ContextI18n);
-  //const classes = useStyles();
+  
   
 
   return (
@@ -23,7 +19,7 @@ const I18n = () => {
       {locale === "es-ES" ? (
         ""
       ) : (
-        <IconButton onClick={() => selectLanguage("es-ES")} >
+        <IconButton onClick={() => selectLanguage("es-ES")}>
           <Avatar
             sx={{ width: 24, height: 24 }}
             src={spain}
