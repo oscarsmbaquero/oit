@@ -1,8 +1,9 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import logo from '../../../assets/images/logo.jpg';
 import text from '../../../assets/images/logoText.png';
 import './Header.scss';
 import { IntlProvider, FormattedMessage } from "react-intl";
+
 
 const Header = () => {
   return (
