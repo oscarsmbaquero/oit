@@ -11,6 +11,7 @@ import routes from "./Config/routes";
 
 import Spanish from "../src/lang/es.json";
 import English from "../src/lang/en.json";
+ import Portuguese from "../src/lang/pt.json"
 import I18n from "./context/i18n/I18n";
 
 export const ContextI18n = React.createContext();
@@ -23,8 +24,10 @@ function App() {
   useEffect(() => {
     if (locale === "es-ES") {
       setMessages(Spanish);
-    } else {
+    } else if(locale === "en"){
       setMessages(English);
+    } else {
+      setMessages(Portuguese);
     }
   }, [locale]);
 
@@ -32,8 +35,10 @@ function App() {
     setLocale(newLocale);
     if (newLocale === "es-ES") {
       setMessages(Spanish);
-    } else {
+    } else if (newLocale === "en"){
       setMessages(English);
+    } else {
+      setMessages(Portuguese);
     }
   }
 

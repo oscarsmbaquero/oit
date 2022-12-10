@@ -4,6 +4,7 @@ import { ContextI18n } from "../../App";
 import "./I18n.scss";
 import spain from "../../assets/banderas/spain.png";
 import english from "../../assets/banderas/english.jpg";
+import portuguese from "../../assets/banderas/portugal.jpg";
 
 const I18n = () => {
   const { locale, selectLanguage } = useContext(ContextI18n);
@@ -24,6 +25,14 @@ const I18n = () => {
           <Avatar
           sx={{ width: 24, height: 24 }}
             src={english}
+            //  sx={{ bgcolor: red[500] }}
+            aria-label="recipe"
+          ></Avatar>
+        </IconButton>
+        <IconButton onClick={() => selectLanguage("pt")}>
+          <Avatar
+          sx={{ width: 24, height: 24 }}
+            src={portuguese}
             //  sx={{ bgcolor: red[500] }}
             aria-label="recipe"
           ></Avatar>

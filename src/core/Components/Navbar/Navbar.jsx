@@ -1,13 +1,15 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import './Navbar.scss';
 import I18n from '../../../context/i18n/I18n';
-import { IntlProvider, FormattedMessage } from "react-intl";
+import { IntlProvider, FormattedMessage} from "react-intl";
 
 import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
 import text from '../../../assets/images/logoText.png';
 import Avatar from "@mui/material/Avatar";
 import logo4 from "../../../assets/images/logo.jpg";
 const Menu = () => {
+
+  
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
