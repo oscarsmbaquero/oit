@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <SWContextProvider>
       <Router>
-        {/* <Header /> */}
+        <Header />
         <Navbar />
         <div className="main">
             <Routes>

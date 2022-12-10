@@ -9,8 +9,8 @@ const Menu = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="/">
-        <Avatar alt="Remy Sharp" src={logo4} className="logo"/>
+        <Navbar.Brand href="/" className="logo">
+        OIT
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -35,7 +35,7 @@ const Menu = () => {
           <Nav>
           
             <Nav.Link eventKey={2} href="#memes">
-              OIT
+              
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

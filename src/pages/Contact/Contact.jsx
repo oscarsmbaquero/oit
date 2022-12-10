@@ -20,15 +20,18 @@ import { useState } from "react";
 // import Swal from "sweetalert2";
 //import logo4 from "../../../assets/images/logo.jpg";
 import { MenuItem, Select } from "@mui/material";
+import emailjs from '@emailjs/browser';
+//import Swal from "sweetalert2";
 
-const loginInitialState = {
-  email: "",
-  password: "",
-  name: "",
-  // surname: "",
-  account_type: "",
-  image:""
-};
+
+// const loginInitialState = {
+//   email: "",
+//   password: "",
+//   name: "",
+//   // surname: "",
+//   account_type: "",
+//   image:""
+// };
 
 function Copyright(props) {
   return (
@@ -53,30 +56,46 @@ const theme = createTheme();
 export default function SignUp() {
   //const navigate = useNavigate();
   //const dispatch = useDispatchAuth();
+  let navigate = useNavigate();
 
-  const [registerForm, setRegisterForm] = useState(loginInitialState);
+  //const [registerForm, setRegisterForm] = useState(loginInitialState);
 
-  const handleRegisterForm = (event) => {
-    console.log(event.target,'target');
-    const { name, value } = event.target;
-    console.log(name,value,'name');
-    setRegisterForm((prevState) => ({ ...prevState, [name]: value }));
-  };
-   console.log(registerForm,'registerForm')
+  // const handleRegisterForm = (event) => {
+  //   console.log(event.target,'target');
+  //   const { name, value } = event.target;
+  //   console.log(name,value,'name');
+  //   setRegisterForm((prevState) => ({ ...prevState, [name]: value }));
+  // };
+  //  console.log(registerForm,'registerForm')
  
   //console.log(dispatch,22);
   //enviar login al server
-  const handleRegister = async (event) => {
-    event.preventDefault();
-    // try {
-    //     registerUser(dispatch, registerForm);
-    //     setRegisterForm(loginInitialState);
-    //     registerForm.account_type === "Tecnico" ? navigate("/")
-    //         : navigate("/");
-    // } catch (error) {
-    //     console.log(error);
-    // }
-};
+  const sendMail = (e) => {
+    e.preventDefault();
+    console.log('Entro')  
+      
+    try {
+
+      console.log(e.target.mail.value);
+      emailjs
+        .sendForm(
+          "service_kqpmbaa",
+          "template_2c1n23x",
+          e.target,
+          "dso8n6rVU1ADlfbV4"
+        )
+        .then((response) => console.log(response));
+      // Swal.fire({
+      //   //title: "Success!",
+      //   text: " Gracias por la reserva. Le confirmaremos su reserva lo antes posible",
+      //   icon: "success",
+      //   confirmButtonText: "Ok",
+      // });
+      navigate("/");
+    } catch (error) {
+      navigate("/");
+    }
+  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -90,23 +109,22 @@ export default function SignUp() {
             alignItems: "center",
           }}
         >
-        
           <Box
             component="form"
-            onSubmit={handleRegister}
+            onSubmit={sendMail}
             noValidate
             sx={{ mt: 1 }}
           >
-          
             <TextField
               margin="normal"
               required
               fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              onChange={handleRegisterForm}
-              autoFocus
+              name="mail"
+              label="Mail"
+              type="mail"
+              id="mail"
+              // onChange={handleRegisterForm}
+              
             />
             <TextField
               margin="normal"
@@ -114,20 +132,20 @@ export default function SignUp() {
               fullWidth
               name="name"
               label="Name"
-              type="name"
+              type="text"
               id="name"
-              onChange={handleRegisterForm}
+              //onChange={handleRegisterForm}
               
             />
             <TextField
               margin="normal"
               required
               fullWidth
-              name="password"
+              name="question"
               label="Text"
               type="text"
               id="password"
-              onChange={handleRegisterForm}
+              //onChange={handleRegisterForm}
             />
             <Button
               type="submit"
