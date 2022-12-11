@@ -11,6 +11,7 @@ import { useNavigate } from "react-router-dom";
  import Swal from "sweetalert2";
 import emailjs from '@emailjs/browser';
 import { IntlProvider, FormattedMessage } from "react-intl";
+import "./Contact.scss";
 
 
 function Copyright(props) {
@@ -59,6 +60,7 @@ export default function SignUp() {
   };
 
   return (
+    <div className="form">
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
@@ -120,5 +122,6 @@ export default function SignUp() {
         </Box>
       </Container>
     </ThemeProvider>
+    </div>
   );
 }

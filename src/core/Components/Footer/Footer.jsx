@@ -9,15 +9,14 @@ export default function App() {
     return (
       <Typography
         variant="body2"
-        color="text.primary"
         align="center"
         {...props}
       >
-       
+       {"Copyright © "}
         <Link href="https://github.com/oscarsmbaquero">
-        {"Copyright © "}&nbsp;OIT&nbsp; {new Date().getFullYear()}
+        &nbsp;OIT&nbsp; 
         </Link>{" "}
-        
+        {new Date().getFullYear()}
         {"."}
       </Typography>
     );
@@ -42,9 +41,9 @@ export default function App() {
           </a>
         </div>
       </section>
-      {/* <div className='text-center p-4' style={{color:'whitesmoke' }}>
+      <div className='me-5 text-center p-4 text-muted' bgColor='light'>
       <Copyright />
-      </div> */}
+      </div>
     </MDBFooter>
   );
 }

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import { IntlProvider, FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
+import "./AlertButton.scss";
 
 
 
@@ -24,20 +25,6 @@ export default function Alert() {
     <div>
       {isShown ? (
         <div className="message">
-        {/* <Button
-                variant="contained"
-                //color="primary"
-                type="submit"
-                //onClick={sendMail}
-                style={{
-                  borderRadius: 50,
-                  backgroundColor: "black",
-                  color: "white",
-                  marginRight:'5px'
-                }}
-              >
-                Stack
-              </Button> */}
               <Link as={Link} to={"/projects"}>
               <Button
                 variant="contained"
@@ -57,9 +44,7 @@ export default function Alert() {
               <Link as={Link} to={"/cv"}>
                <Button
                 variant="contained"
-                //color="primary"
                 type="submit"
-                //onClick={sendMail}
                 style={{
                   borderRadius: 50,
                   backgroundColor: "black",
