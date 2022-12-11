@@ -1,6 +1,8 @@
+
 import { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import { IntlProvider, FormattedMessage } from "react-intl";
+import { Link } from "react-router-dom";
 
 
 
@@ -36,6 +38,7 @@ export default function Alert() {
               >
                 Stack
               </Button> */}
+              <Link as={Link} to={"/projects"}>
               <Button
                 variant="contained"
                 //color="primary"
@@ -49,7 +52,10 @@ export default function Alert() {
                 }}
               >
                 <FormattedMessage id="app.projects"/>
-              </Button> <Button
+              </Button>
+              </Link>
+              <Link as={Link} to={"/cv"}>
+               <Button
                 variant="contained"
                 //color="primary"
                 type="submit"
@@ -63,6 +69,7 @@ export default function Alert() {
               >
                 CV
               </Button>
+              </Link> 
         </div>
       ) : (
         <div></div>

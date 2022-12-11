@@ -125,7 +125,6 @@ export default function RecipeReviewCard() {
                     border: 1,
                     //borderColor:"red",
                     borderRadius:2,
-                    
                     backgroundColor:"#80deea",
                      }}>
                       {o.name === "Git" && (
