@@ -16,7 +16,7 @@ const Back = ({ back }) => {
   useEffect(() => {
     const timeoutID = setTimeout(() => {
       setIsShown(true);
-    }, 2000);
+    }, 3000);
 
     return () => {
       // 👇️ clear timeout when component unmounts
@@ -28,37 +28,17 @@ const Back = ({ back }) => {
       {isShown ? (
         <>
         <h6> BACKEND</h6>
-        <Grid container spacing={2}>
-          {back.map((item) => (
-            <Grid item xs={12} md={6} lg={4}>
-              <Card
-                elevation={5}
-                sx={{
-                  borderRadius: "4px",
-                  justifyContent: "flex-start",
-                  flex: "1 0 auto",
-                  // marginLeft: "5px",
-                  marginTop: "10px",
-                  flexDirection: "column",
-                  flexWrap: "wrap",
-                  ":hover": {
-                    boxShadow: 20, // theme.shadows[20]
-                  },
-                }}
-              >
-                <CardHeader title={item.title} />
-                <CardContent>
-                  <Avatar
-                    variant="rounded"
-                    style={{ justifyContent: "center", display: "flex" }}
-                    aria-label="recipe"
+        <Grid container spacing={2}
+      sx={{ justifyContent: "center", display: "flex", marginTop:"20" }}              
+      >
+        {back.map((item) => (
+          <Avatar 
+               sx={{ padding:"20" }}              
                     src={item.image}
                   ></Avatar>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
+        
+        ))}
+      </Grid>
         </>
       ) : (
         <div></div>
