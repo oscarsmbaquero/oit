@@ -1,5 +1,5 @@
 import {  Avatar, Stack, Card, CardContent, CardHeader, CardMedia, Grid } from '@mui/material';
-
+import { AvatarGroup } from '@mui/material';
 import React,{useState, useEffect} from 'react'
 import "./Stack.scss"
 const Front = ({front}) => {
@@ -20,17 +20,17 @@ const Front = ({front}) => {
     {isShown ? (
         <>
       <h6>FRONTEND</h6>
-      <Grid container spacing={2}
-      sx={{ justifyContent: "center", display: "flex", marginTop:"20" }}              
+      <AvatarGroup spacing={1} max={12}
+      sx={{ justifyContent: "center", display: "flex", marginTop:"20", flexWrap: "wrap" }}              
       >
         {front.map((item) => (
-          <Avatar 
-               sx={{ padding:"20" }}              
+          <Avatar
+                  sx={{border:0}}
                     src={item.image}
                   ></Avatar>
         
         ))}
-      </Grid>
+        </AvatarGroup>
       </>   
      
     ) : (
