@@ -9,7 +9,7 @@ const FirstText = () => {
     <div>
       <div class="star-wars-intro">
         <h2 class="main-logo"></h2>
-        <p class="intro-text"></p>
+        {/* <p class="intro-text"></p> */}
         <div class="main-content">
           <div class="title-content">
             <p class="content-body">

@@ -6,7 +6,7 @@ import {
   CardMedia,
   Grid,
 } from "@mui/material";
-import "./Stack.scss"
+import "./Stack.scss";
 
 import React, { useState, useEffect } from "react";
 
@@ -27,18 +27,16 @@ const Back = ({ back }) => {
     <div>
       {isShown ? (
         <>
-        <h6> BACKEND</h6>
-        <Grid container spacing={2}
-      sx={{ justifyContent: "center", display: "flex", marginTop:"20" }}              
-      >
-        {back.map((item) => (
-          <Avatar 
-               sx={{ padding:"20" }}              
-                    src={item.image}
-                  ></Avatar>
-        
-        ))}
-      </Grid>
+          <h6> BACKEND</h6>
+          <Grid
+            container
+            spacing={2}
+            sx={{ justifyContent: "center", display: "flex", marginTop: "20" }}
+          >
+            {back.map((item) => (
+              <Avatar src={item.image}></Avatar>
+            ))}
+          </Grid>
         </>
       ) : (
         <div></div>
