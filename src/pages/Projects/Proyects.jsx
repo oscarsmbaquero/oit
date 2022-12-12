@@ -47,7 +47,7 @@ export default function RecipeReviewCard() {
   }, []);
 
   useEffect(() => {
-    Aos.init({duration:2000})
+    Aos.init({duration:3000})
    }, [])
 
   console.log(stack, "stack");
@@ -58,7 +58,7 @@ export default function RecipeReviewCard() {
     return Math.floor(Math.random() * max);
   }
   return (
-    <div data-aos="fade-down">
+    <div data-aos="fade-up">
       <Grid container spacing={2}>
         {stack.map((item) => (
           <Grid item xs={12} md={6} lg={4}>

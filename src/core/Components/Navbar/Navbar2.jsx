@@ -15,7 +15,7 @@ class navBar extends Component {
   };
 
   listenScrollEvent = (e) => {
-    if (window.scrollY > 25) {
+    if (window.scrollY > 75) {
       this.setState({ bg: "dark" });
     } else {
       this.setState({ bg: "transparent" });
