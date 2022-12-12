@@ -27,7 +27,9 @@ class navBar extends Component {
   }
   render() {
     return (
-      <Navbar collapseOnSelect  expand="lg" bg={this.state.bg}>
+      <Navbar collapseOnSelect  expand="lg" bg={this.state.bg} 
+      //sticky="top"
+      >
         <Container>
           {/* <Navbar.Brand href="/" className="logo"> */}
           <I18n />
