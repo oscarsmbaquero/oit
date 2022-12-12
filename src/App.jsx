@@ -23,27 +23,27 @@ function App() {
   const [messages, setMessages] = useState(Spanish);
 
   useEffect(() => {
-    if (locale === "es-ES") {
-      setMessages(Spanish);
+    if (locale === "pt") {
+      setMessages(Portuguese);
     } else if(locale === "en"){
       setMessages(English);
     } else  if(locale === "eu"){
       setMessages(EusKara);
     }else{
-      setMessages(Portuguese);
+      setMessages(Spanish);
     }
   }, [locale]);
 
   function selectLanguage(newLocale) {
     setLocale(newLocale);
-    if (newLocale === "es-ES") {
-      setMessages(Spanish);
+    if (newLocale === "pt") {
+      setMessages(Portuguese);
     } else if (newLocale === "en"){
       setMessages(English);
     } else if (newLocale === "eu"){
       setMessages(EusKara);
     } else {
-      setMessages(Portuguese);
+      setMessages(Spanish);
     }
   }
 
