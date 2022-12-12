@@ -1,5 +1,5 @@
 import React from "react";
-import cv from "../../assets/images/CV.jpg";
+import cv from "../../assets/images/cv.jpg";
 import "./Cv.scss";
 //import IconoDescarga from "../../../src/assets/images/icon-house.svg";
 import IconoDescarga from "../../../src/assets/images/pdf.png";
