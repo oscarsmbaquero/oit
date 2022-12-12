@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { IntlProvider, FormattedMessage } from "react-intl";
 
 import Navbar from "./core/Components/Navbar/Navbar";
+import Navbar2 from "./core/Components/Navbar/Navbar2";
 import Header from "./core/Components/Header/Header";
 import Footer from "./core/Components/Footer/Footer";
 import routes from "./Config/routes";
