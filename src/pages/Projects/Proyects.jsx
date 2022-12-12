@@ -47,7 +47,7 @@ export default function RecipeReviewCard() {
   }, []);
 
   useEffect(() => {
-    Aos.init({duration:3000})
+    Aos.init({duration:2000})
    }, [])
 
   console.log(stack, "stack");
