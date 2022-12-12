@@ -24,10 +24,10 @@ export default function App() {
 
 
   return (
-    <MDBFooter bgColor='dark' className='text-center text-lg-start text-muted'>
+    <MDBFooter bgColor='dark' className='text-center text-lg-start'>
       <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
         <div className='me-5 d-none d-lg-block'>
-          <span><FormattedMessage id="app.footer"/></span>
+          <span className="text-white"><FormattedMessage id="app.footer"/></span>
         </div>
         <div>
           <a href='' className='me-4 text-reset'>
@@ -41,7 +41,7 @@ export default function App() {
           </a>
         </div>
       </section>
-      <div className='me-5 text-center p-4 text-muted' bgColor='light'>
+      <div className='me-5 text-center p-4 text-white' bgColor='light'>
       <Copyright />
       </div>
     </MDBFooter>

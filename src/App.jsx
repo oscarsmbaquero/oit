@@ -53,8 +53,8 @@ function App() {
       <ContextI18n.Provider value={{ locale, selectLanguage }}>
         <IntlProvider locale={locale} messages={messages}>
           <Router>
-            <Header />
-            <Navbar />
+            <Header/>
+            <Navbar2/>
             <div className="main">
               <Routes>
                 {routes.map((route) => (
