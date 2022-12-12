@@ -41,7 +41,7 @@ export default function App() {
           <a href="" className="me-4 text-reset">
             <MDBIcon color="light" fab icon="github" />
           </a>
-          <a href="" className="me-4 text-reset">
+          <a href="https://wa.me/+34691487362" class="whatsapp_float" target="_blank" rel="noopener noreferrer" className="me-4 text-reset">
             <MDBIcon color="success" fab icon="whatsapp" />
           </a>
         </div>
