@@ -17,7 +17,11 @@ import Badge from "react-bootstrap/Badge";
 // import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 // import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { MDBIcon } from "mdb-react-ui-kit";
+import Aos from 'aos';
+import "aos/dist/aos.css";
 const BASEURL = "https://62852cc03060bbd347460bff.mockapi.io/";
+
+
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -42,6 +46,10 @@ export default function RecipeReviewCard() {
     fetchProjects();
   }, []);
 
+  useEffect(() => {
+    Aos.init({duration:2000})
+   }, [])
+
   console.log(stack, "stack");
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -50,7 +58,7 @@ export default function RecipeReviewCard() {
     return Math.floor(Math.random() * max);
   }
   return (
-    <div>
+    <div data-aos="fade-down">
       <Grid container spacing={2}>
         {stack.map((item) => (
           <Grid item xs={12} md={6} lg={4}>
