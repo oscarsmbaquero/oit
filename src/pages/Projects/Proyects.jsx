@@ -17,11 +17,9 @@ import Badge from "react-bootstrap/Badge";
 // import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 // import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { MDBIcon } from "mdb-react-ui-kit";
-import Aos from 'aos';
+import Aos from "aos";
 import "aos/dist/aos.css";
 const BASEURL = "https://62852cc03060bbd347460bff.mockapi.io/";
-
-
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -35,7 +33,7 @@ const ExpandMore = styled((props) => {
 }));
 
 export default function RecipeReviewCard() {
-  const [stack, setStack] = useState([]);  
+  const [stack, setStack] = useState([]);
   const [expanded, setExpanded] = React.useState(false);
 
   useEffect(() => {
@@ -47,10 +45,8 @@ export default function RecipeReviewCard() {
   }, []);
 
   useEffect(() => {
-    Aos.init({duration:2000})
-   }, [])
-
-  console.log(stack, "stack");
+    Aos.init({ duration: 2000 });
+  }, []);
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
@@ -112,7 +108,9 @@ export default function RecipeReviewCard() {
                 </Typography>
               </CardContent>
               <CardActions sx={{ justifyContent: "space-evenly" }}>
-              <Badge bg="success" text="bold">Stack:</Badge>
+                <Badge bg="success" text="bold">
+                  Stack:
+                </Badge>
                 {item.stack.map((i) => (
                   <Avatar
                     sx={{
@@ -125,28 +123,30 @@ export default function RecipeReviewCard() {
                     src={i.image}
                   ></Avatar>
                 ))}
-                <Badge bg="primary" text="bold">Links:</Badge>
+                <Badge bg="primary" text="bold">
+                  Links:
+                </Badge>
                 {item.links.map((o) => (
-                 
-                    <IconButton aria-label="settings"  
-                    sx={{ 
-                    border: 1,
-                    //borderColor:"red",
-                    borderRadius:2,
-                    backgroundColor:"#80deea",
-                     }}>
-                      {o.name === "Git" && (
-                        <a href={o.linkGit} >
-                          <MDBIcon color="dark" fab icon="github" />
-                        </a>
-                      )}
-                      {o.name === "Vercel" && (
-                        <a href={o.linkVer} >
-                          <MDBIcon color="danger" fab icon="google" />
-                        </a>
-                      )}
-                    </IconButton>
-                  
+                  <IconButton
+                    aria-label="settings"
+                    sx={{
+                      border: 1,
+                      //borderColor:"red",
+                      borderRadius: 2,
+                      backgroundColor: "#80deea",
+                    }}
+                  >
+                    {o.name === "Git" && (
+                      <a href={o.linkGit}>
+                        <MDBIcon color="dark" fab icon="github" />
+                      </a>
+                    )}
+                    {o.name === "Vercel" && (
+                      <a href={o.linkVer}>
+                        <MDBIcon color="danger" fab icon="google" />
+                      </a>
+                    )}
+                  </IconButton>
                 ))}
 
                 <ExpandMore
@@ -158,7 +158,7 @@ export default function RecipeReviewCard() {
                   {/* <ExpandMoreIcon /> */}
                 </ExpandMore>
               </CardActions>
-              <Collapse in={expanded} timeout="auto" unmountOnExit>
+              {/* <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <CardContent>
                   <Typography paragraph>Method:</Typography>
                   <Typography paragraph>
@@ -190,7 +190,7 @@ export default function RecipeReviewCard() {
                     then serve.
                   </Typography>
                 </CardContent>
-              </Collapse>
+              </Collapse> */}
             </Card>
           </Grid>
         ))}

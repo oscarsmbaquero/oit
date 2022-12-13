@@ -6,6 +6,7 @@ import { IntlProvider, FormattedMessage } from "react-intl";
 
 import Navbar from "./core/Components/Navbar/Navbar";
 import Navbar2 from "./core/Components/Navbar/Navbar2";
+import Navbar3 from "./core/Components/Navbar/Navbar3";
 import Header from "./core/Components/Header/Header";
 import Footer from "./core/Components/Footer/Footer";
 import routes from "./Config/routes";
@@ -54,7 +55,7 @@ function App() {
         <IntlProvider locale={locale} messages={messages}>
           <Router>
             <Header/>
-            <Navbar2/>
+            <Navbar3/>
             <div className="main">
               <Routes>
                 {routes.map((route) => (

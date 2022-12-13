@@ -15,11 +15,12 @@ class navBar extends Component {
   };
 
   listenScrollEvent = (e) => {
-    if (window.scrollY > 75) {
-      this.setState({ bg: "dark" });
-    } else {
-      this.setState({ bg: "transparent" });
-    }
+    // if (window.scrollY > 75) {
+    //   this.setState({ bg: "dark" });
+    // } else {
+    //   this.setState({ bg: "transparent" });
+    // }
+    this.setState({ bg: "transparent" });
   };
 
   componentDidMount() {
@@ -37,16 +38,16 @@ class navBar extends Component {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mx-auto">
-              <Nav.Link as={Link} to={"/"} routerLinkActive="active" className='text-center text-lg-start text-muted'>
+              <Nav.Link as={Link} to={"/"} routerLinkActive="active" className='text-center text-lg-start'>
               <p className="text-white"><FormattedMessage id="app.home" /></p>
               </Nav.Link>
-              <Nav.Link as={Link} to={"/contact"} routerLinkActive="active" className='text-center text-lg-start text-muted'>
+              <Nav.Link as={Link} to={"/contact"} routerLinkActive="active" className='text-center text-lg-start'>
               <p className="text-white "><FormattedMessage id="app.contact" /></p>
               </Nav.Link>
-              <Nav.Link as={Link} to={"/projects"} routerLinkActive="active" className='text-center text-lg-start text-muted'>
+              <Nav.Link as={Link} to={"/projects"} routerLinkActive="active" className='text-center text-lg-start'>
               <p className="text-white "><FormattedMessage id="app.projects" /></p>
               </Nav.Link>
-              <Nav.Link as={Link} to={"/cv"} routerLinkActive="active" className='text-center text-lg-start text-muted'>
+              <Nav.Link as={Link} to={"/cv"} routerLinkActive="active" className='text-center text-lg-start'>
               <p className="text-white ">CV</p>
               </Nav.Link>
               <Nav.Link as={Link} to={"/stack"} className='text-center text-lg-start text-muted'>
