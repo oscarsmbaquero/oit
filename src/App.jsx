@@ -55,7 +55,7 @@ function App() {
         <IntlProvider locale={locale} messages={messages}>
           <Router>
             <Header/>
-            <Navbar3/>
+            <Navbar2/>
             <div className="main">
               <Routes>
                 {routes.map((route) => (

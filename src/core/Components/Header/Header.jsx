@@ -12,7 +12,7 @@ const Header = () => {
       <img src={logo} className="header__logo" alt={logo} />
       </div>
       <div>
-      <h6>Oscar Sánchez-Marín Baquero</h6>
+      <h5>Oscar Sánchez-Marín Baquero</h5>
       {/* <img src={text} className="header__text" alt={text} /> */}
      <p><FormattedMessage id="app.header"/></p> 
       </div>
