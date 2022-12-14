@@ -35,9 +35,7 @@ export default function Alert() {
                 marginRight: "5px",
                 text: "bold",
                 fontFamily: "Caveat",
-                ":hover": {
-                  backgroundColor: 'red', // theme.shadows[20]
-                },
+               
               }}
             >
               <p>
