@@ -23,7 +23,7 @@ export default function Alert() {
     <div>
       {isShown ? (
         <div className="message">
-          <h6><FormattedMessage id="app.alert"/></h6>
+          <h3><FormattedMessage id="app.alert"/></h3>
           <AlertButton/>
         </div>
       ) : (

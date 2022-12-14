@@ -13,9 +13,36 @@
    display: block;
 }
 .main{
-  min-height: 85vh;
+  min-height: 75vh;
  
     // background-size:cover;
+}
+
+h1{        
+    // font-size: 32px;
+     //padding: 40px 20px 50px 20px;
+     font-family: 'Caveat', cursive;
+    //  color: white;
+}
+h3{        
+    // font-size: 32px;
+     //padding: 40px 20px 50px 20px;
+      font-family: 'Caveat', cursive;
+      color: white;
+}
+h6{
+  font-family: 'Caveat', cursive;
+  color: white;
+}
+h5{
+  font-family: 'Caveat', cursive;
+  color: black;  
+}
+p{
+  font-family: 'Caveat', cursive;
+  color: black;
+  font-size: 22px;
+  margin: 0;
 }
 
 

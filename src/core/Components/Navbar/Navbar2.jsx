@@ -38,19 +38,19 @@ class navBar extends Component {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mx-auto">
-              <Nav.Link as={Link} to={"/"} routerLinkActive="active" className='text-center text-lg-start'>
+              <Nav.Link as={Link} to={"/"} routerLinkActive="active">
               <p className="text-white"><FormattedMessage id="app.home" /></p>
               </Nav.Link>
-              <Nav.Link as={Link} to={"/contact"} routerLinkActive="active" className='text-center text-lg-start'>
+              <Nav.Link as={Link} to={"/contact"} routerLinkActive="active">
               <p className="text-white"><FormattedMessage id="app.contact" /></p>
               </Nav.Link>
-              <Nav.Link as={Link} to={"/projects"} routerLinkActive="active" className='text-center text-lg-start'>
+              <Nav.Link as={Link} to={"/projects"} routerLinkActive="active">
               <p className="text-white"><FormattedMessage id="app.projects" /></p>
               </Nav.Link>
-              <Nav.Link as={Link} to={"/cv"} routerLinkActive="active" className='text-center text-lg-start'>
+              <Nav.Link as={Link} to={"/cv"} routerLinkActive="active">
               <p className="text-white">CV</p>
               </Nav.Link>
-              <Nav.Link as={Link} to={"/stack"} className='text-center text-lg-start text-muted'>
+              <Nav.Link as={Link} to={"/stack"}>
               <p className="text-white">Stack</p>
               </Nav.Link>
               {/* <NavDropdown title="Projects" id="collasible-nav-dropdown">

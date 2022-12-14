@@ -20,7 +20,7 @@ export default function App() {
         {new Date().getFullYear()}
         {"."}
       </Typography>
-    );
+    );  
   }
 
   return (
@@ -46,9 +46,9 @@ export default function App() {
           </a>
         </div>
       </section>
-      <div className="me-5 text-center p-4 text-white" bgColor="light">
+      {/* <div className="me-5 text-center p-4 text-white" bgColor="light">
         <Copyright />
-      </div>
+      </div> */}
     </MDBFooter>
   );
 }

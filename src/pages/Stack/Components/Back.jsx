@@ -27,11 +27,11 @@ const Back = ({ back }) => {
     <div>
       {isShown ? (
         <>
-          <h6> BACKEND</h6>
+          <h1> BACKEND</h1>
           <Grid
             container
-            spacing={2}
-            sx={{ justifyContent: "center", display: "flex", marginTop: "20" }}
+            spacing={1}
+            sx={{ justifyContent: "center", display: "flex", marginTop: "40px" }}
           >
             {back.map((item) => (
               <Avatar src={item.image}></Avatar>

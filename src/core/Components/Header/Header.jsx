@@ -12,13 +12,13 @@ const Header = () => {
       <img src={logo} className="header__logo" alt={logo} />
       </div>
       <div>
-      <h5>Oscar Sánchez-Marín Baquero</h5>
+      <h1>Oscar Sánchez-Marín Baquero</h1>
       {/* <img src={text} className="header__text" alt={text} /> */}
-     <p><FormattedMessage id="app.header"/></p> 
+      <p><FormattedMessage id="app.header"/></p> 
       </div>
       
     </div>
   )
 }
 
-export default Header
+export default Header 

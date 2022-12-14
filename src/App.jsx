@@ -3,7 +3,7 @@ import "./App.scss";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 // import { SWContextProvider } from "./context/context";
 import { IntlProvider, FormattedMessage } from "react-intl";
-
+import SplashScreen from "./core/SplashScreen/SplashScreen";
 import Navbar from "./core/Components/Navbar/Navbar";
 import Navbar2 from "./core/Components/Navbar/Navbar2";
 import Navbar3 from "./core/Components/Navbar/Navbar3";
@@ -17,13 +17,18 @@ import Portuguese from "../src/lang/pt.json";
 import EusKara from "../src/lang/eu.json";
 import I18n from "./context/i18n/I18n";
 
+
 export const ContextI18n = React.createContext();
 //import Navbar2 from "./core/Components/Navbar/Navbar2";
 
 function App() {
   const [locale, setLocale] = useState(navigator.language);
   const [messages, setMessages] = useState(Spanish);
+  const [splashScreen, setSplashScreen] = useState(true);
 
+  useEffect(() => {
+    setTimeout(() => setSplashScreen(false), 2000);
+  });
   useEffect(() => {
     if (locale === "pt") {
       setMessages(Portuguese);
@@ -50,12 +55,16 @@ function App() {
   }
 
   return (
+  <>
+    {splashScreen ? (
+      <SplashScreen />
+    ) : (
     <div className="App">
       <ContextI18n.Provider value={{ locale, selectLanguage }}>
         <IntlProvider locale={locale} messages={messages}>
           <Router>
             <Header/>
-            <Navbar2/>
+            <Navbar3/>
             <div className="main">
               <Routes>
                 {routes.map((route) => (
@@ -72,6 +81,8 @@ function App() {
         </IntlProvider>
       </ContextI18n.Provider>
     </div>
+    )}
+    </> 
   );
 }
 

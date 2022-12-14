@@ -9,11 +9,10 @@ import { Link } from "react-router-dom";
 import { IntlProvider, FormattedMessage } from "react-intl";
 import React, { Component } from "react";
 import I18n from '../../../context/i18n/I18n';
+import logo from '../../../assets/images/logo.jpg';
 import './Navbar.scss'
 
 function OffcanvasExample() {
-
- 
   
   return (
     <>
@@ -30,7 +29,7 @@ function OffcanvasExample() {
             >
               <Offcanvas.Header closeButton >
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}` }>
-                  <h6 className='text-danger'>Menu</h6>
+                  <img src={logo} className="header__logo" alt={logo} />
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>

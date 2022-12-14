@@ -19,9 +19,14 @@ const Front = ({front}) => {
     <div>
     {isShown ? (
         <>
-      <h6>FRONTEND</h6>
+      <h1>FRONTEND</h1>
+      <Grid
+            container
+            spacing={1}
+            sx={{ justifyContent: "center", display: "flex", marginTop: "40px" }}
+          >
       <AvatarGroup spacing={1} max={12}
-      sx={{ justifyContent: "center", display: "flex", marginTop:"20", flexWrap: "wrap" }}              
+      sx={{ justifyContent: "center", display: "flex", marginTop:"20",marginBottom:"40px", flexWrap: "wrap" }}              
       >
         {front.map((item) => (
           <Avatar
@@ -31,6 +36,7 @@ const Front = ({front}) => {
         
         ))}
         </AvatarGroup>
+        </Grid>
       </>   
      
     ) : (

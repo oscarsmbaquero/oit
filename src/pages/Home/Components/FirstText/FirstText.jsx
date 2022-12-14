@@ -12,9 +12,9 @@ const FirstText = () => {
         {/* <p class="intro-text"></p> */}
         <div class="main-content">
           <div class="title-content">
-            <p class="content-body">
+            {/* <h1 class="content-body"> */}
             <FormattedMessage id="app.text"/>
-            </p>
+            {/* </h1> */}
           </div>
         </div>
       </div>
