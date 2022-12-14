@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { IntlProvider, FormattedMessage } from "react-intl";
 import React, { Component } from "react";
 import I18n from '../../../context/i18n/I18n';
@@ -34,11 +34,11 @@ function OffcanvasExample() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="me-auto">
-                  <Nav.Link closeButton as={Link} to={"/"}><p><FormattedMessage id="app.home" /></p></Nav.Link>
-                  <Nav.Link as={Link} to={"/contact"}><p><FormattedMessage id="app.contact" /></p></Nav.Link>
-                  <Nav.Link as={Link} to={"/projects"}><p><FormattedMessage id="app.projects" /></p></Nav.Link>
-                  <Nav.Link as={Link} to={"/cv"}><p>Cv</p></Nav.Link>
-                  <Nav.Link as={Link} to={"/stack"}><p>Stack</p></Nav.Link>
+                  <NavLink as={Link} to={"/"} className="custom-link" active><FormattedMessage id="app.home" /></NavLink>
+                  <NavLink as={Link} to={"/contact"} className="custom-link"><FormattedMessage id="app.contact" /></NavLink>
+                  <NavLink as={Link} to={"/projects"} className="custom-link"><FormattedMessage id="app.projects" /></NavLink>
+                  <NavLink as={Link} to={"/cv"} className="custom-link">Cv</NavLink>
+                  <NavLink as={Link} to={"/stack"} className="custom-link">Stack</NavLink>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

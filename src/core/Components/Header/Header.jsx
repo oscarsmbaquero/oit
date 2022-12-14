@@ -18,7 +18,7 @@ const Header = () => {
           <FormattedMessage id="app.header" />
         </p>
       </div>
-      <div>
+      <div className="header__i18n">
         <I18n />
       </div>
     </div>

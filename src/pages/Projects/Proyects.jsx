@@ -69,7 +69,7 @@ export default function RecipeReviewCard() {
                 flexDirection: "column",
                 flexWrap: "wrap",
                 ":hover": {
-                  boxShadow: 20, // theme.shadows[20]
+                  boxShadow: 40, // theme.shadows[20]
                 },
               }}
             >

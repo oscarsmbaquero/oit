@@ -1,12 +1,12 @@
 .header{   
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: white;
 
     @media screen  and (max-width: 760px) {
       flex-direction: column;
-      align-items: center;
+      //align-items: right;
       //margin:0 0 1em 1em;
       }
 
@@ -20,7 +20,18 @@
     transform: rotate(360deg);
     transition-duration: 2s;
   }
+  // &__i18n{
+  //   width: 100%;
+  //   height: 100%;
+  // }
  
+  // &__i18n{
+  //   @media screen  and (max-width: 760px) {
+  //     display: flex;
+  //     justify-content: space-between;
+  //     //align-items: flex-end;
+  //     }
+  // }
  
 
 }

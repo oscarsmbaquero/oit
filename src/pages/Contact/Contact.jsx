@@ -14,6 +14,7 @@ import { IntlProvider, FormattedMessage } from "react-intl";
 import "./Contact.scss";
 
 
+
 function Copyright(props) {
   return (
     <Typography
@@ -109,6 +110,7 @@ export default function SignUp() {
               type="submit"
               fullWidth
               variant="contained"
+              
               sx={{
                  mt: 2,
                  mb: 0,

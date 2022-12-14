@@ -9,5 +9,26 @@
     transform: rotate(360deg);
     transition-duration: 2s;
   }
-
+  .custom-link {
+    color: black;
+    font-size:22px;  
+    font-family:  'Caveat';
+    text-decoration: none;
+    margin-left: 10px;
+    
+    }
+    
+    .custom-link:hover {
+    color: rgba(38, 192, 189, 0.97);
+    }
+    
+    .custom-link.active {
+      color: red;
+    }
+   
+    
+    
+    
+    
+    
  
