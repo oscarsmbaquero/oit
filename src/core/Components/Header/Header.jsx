@@ -4,12 +4,19 @@ import text from "../../../assets/images/logoText.png";
 import "./Header.scss";
 import { IntlProvider, FormattedMessage } from "react-intl";
 import I18n from "../../../context/i18n/I18n";
+import { Avatar } from "@mui/material";
 
 const Header = () => {
   return (
     <div className="header">
       <div>
-        <img src={logo} className="header__logo" alt={logo} />
+        {/* <img src={logo} className="header__logo" alt={logo} /> */}
+        <Avatar
+            sx={{ width: 68, height: 68 }}
+            src={logo}
+            //  sx={{ bgcolor: red[500] }}
+            aria-label="recipe"
+          ></Avatar>
       </div>
       <div>
         <h1>Oscar Sánchez-Marín Baquero</h1>
