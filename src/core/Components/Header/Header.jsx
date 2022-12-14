@@ -11,10 +11,9 @@ const Header = () => {
     <div className="header">
       <div>
         {/* <img src={logo} className="header__logo" alt={logo} /> */}
-        <Avatar
+        <Avatar className="header__logo"
             sx={{ width: 68, height: 68 }}
             src={logo}
-            //  sx={{ bgcolor: red[500] }}
             aria-label="recipe"
           ></Avatar>
       </div>

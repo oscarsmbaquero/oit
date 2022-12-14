@@ -28,9 +28,12 @@ export default function Alert() {
               color="primary"
               type="submit"
               style={{
+                width:100,
+                height:40,
+                // padding:10,
                 borderRadius: 50,
                 //borderColor:'rgba(38, 192, 189, 0.97)',
-                backgroundColor: "transparent",
+                backgroundColor: "white",
                 color: "black",
                 marginRight: "5px",
                 text: "bold",
@@ -44,19 +47,25 @@ export default function Alert() {
             </Button>
           </Link>
           <Link as={Link} to={"/cv"}>
-            <Button
-              variant="contained"
+          <Button
+              variant="outlined"
+              color="primary"
               type="submit"
-              sx={{
+              style={{
+                width:100,
+                height:40,
                 borderRadius: 50,
-                backgroundColor: "transparent",
+                backgroundColor: "white",
                 color: "black",
+                marginRight: "5px",
                 text: "bold",
                 fontFamily: "Caveat",
-                marginRight: "5px",
+               
               }}
             >
-              <p>CV</p>
+              <p>
+                CV
+              </p>
             </Button>
           </Link>
         </div>
