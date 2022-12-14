@@ -15,8 +15,9 @@ import Spanish from "../src/lang/es.json";
 import English from "../src/lang/en.json";
 import Portuguese from "../src/lang/pt.json";
 import EusKara from "../src/lang/eu.json";
+import French from "../src/lang/fr.json";
 import I18n from "./context/i18n/I18n";
-
+import { Spa } from "@mui/icons-material";
 
 export const ContextI18n = React.createContext();
 //import Navbar2 from "./core/Components/Navbar/Navbar2";
@@ -32,11 +33,13 @@ function App() {
   useEffect(() => {
     if (locale === "pt") {
       setMessages(Portuguese);
-    } else if(locale === "en"){
+    } else if (locale === "en") {
       setMessages(English);
-    } else  if(locale === "eu"){
+    } else if (locale === "eu") {
       setMessages(EusKara);
-    }else{
+    } else if (locale === "fr") {
+      setMessages(French);
+    } else {
       setMessages(Spanish);
     }
   }, [locale]);
@@ -45,44 +48,46 @@ function App() {
     setLocale(newLocale);
     if (newLocale === "pt") {
       setMessages(Portuguese);
-    } else if (newLocale === "en"){
+    } else if (newLocale === "en") {
       setMessages(English);
-    } else if (newLocale === "eu"){
+    } else if (newLocale === "eu") {
       setMessages(EusKara);
+    } else if (newLocale === "fr") {
+      setMessages(French);
     } else {
       setMessages(Spanish);
     }
   }
 
   return (
-  <>
-    {splashScreen ? (
-      <SplashScreen />
-    ) : (
-    <div className="App">
-      <ContextI18n.Provider value={{ locale, selectLanguage }}>
-        <IntlProvider locale={locale} messages={messages}>
-          <Router>
-            <Header/>
-            <Navbar3/>
-            <div className="main">
-              <Routes>
-                {routes.map((route) => (
-                  <Route
-                    key={route.path}
-                    path={route.path}
-                    element={route.element}
-                  />
-                ))}
-              </Routes>
-            </div>
-            <Footer />
-          </Router>
-        </IntlProvider>
-      </ContextI18n.Provider>
-    </div>
-    )}
-    </> 
+    <>
+      {splashScreen ? (
+        <SplashScreen />
+      ) : (
+        <div className="App">
+          <ContextI18n.Provider value={{ locale, selectLanguage }}>
+            <IntlProvider locale={locale} messages={messages}>
+              <Router>
+                <Header />
+                <Navbar3 />
+                <div className="main">
+                  <Routes>
+                    {routes.map((route) => (
+                      <Route
+                        key={route.path}
+                        path={route.path}
+                        element={route.element}
+                      />
+                    ))}
+                  </Routes>
+                </div>
+                <Footer />
+              </Router>
+            </IntlProvider>
+          </ContextI18n.Provider>
+        </div>
+      )}
+    </>
   );
 }
 
