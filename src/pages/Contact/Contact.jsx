@@ -1,4 +1,4 @@
-import * as React from "react";
+import  React,{useEffect} from "react";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
@@ -12,6 +12,9 @@ import { useNavigate } from "react-router-dom";
 import emailjs from '@emailjs/browser';
 import { IntlProvider, FormattedMessage } from "react-intl";
 import "./Contact.scss";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 
 
 
@@ -60,8 +63,12 @@ export default function SignUp() {
     }
   };
 
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
-    <div className="form">
+    <div className="form" data-aos="fade-left">
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
