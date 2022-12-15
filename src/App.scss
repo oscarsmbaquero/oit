@@ -43,6 +43,38 @@ p{
   font-size: 22px;
   margin: 0;
 }
+.button-git {
+  position: fixed;
+  top: 7rem;
+  right: 0.5rem;
+
+}
+
+.button-git img {
+  width: 3rem;
+
+  @media screen  and (max-width: 760px) {
+    width: 2rem;
+    }
+}
+.button-git img:hover {
+  cursor: pointer;
+}
+figcaption {
+  display:none; 
+  transition: all .5s;
+}
+/* Visible texto */
+figure:hover > figcaption {
+  display:block;
+  transition: all .5s;
+  color:red;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.bold-option{
+  font-weight: bolder;
+  color:red;
+}
 
 
 

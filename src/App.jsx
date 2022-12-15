@@ -18,9 +18,9 @@ import EusKara from "../src/lang/eu.json";
 import French from "../src/lang/fr.json";
 import I18n from "./context/i18n/I18n";
 import { Spa } from "@mui/icons-material";
+import IconoGit from "../src/assets/images/git.png";
 
 export const ContextI18n = React.createContext();
-//import Navbar2 from "./core/Components/Navbar/Navbar2";
 
 function App() {
   const [locale, setLocale] = useState(navigator.language);
@@ -85,6 +85,17 @@ function App() {
               </Router>
             </IntlProvider>
           </ContextI18n.Provider>
+          <div className="button-git">
+            <a href="https://github.com/oscarsmbaquero">
+              <figure>
+                <img
+                  src={IconoGit}
+                  alt="icono GitHub"
+                />
+              </figure>
+            </a>
+            {/* </Link> */}
+          </div>
         </div>
       )}
     </>

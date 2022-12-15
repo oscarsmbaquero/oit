@@ -84,13 +84,13 @@ export default function RecipeReviewCard() {
                 action={
                   <>
                     <div className="text-warning mb-1 me-2">
+                      {/* <MDBIcon fas icon="star" />
                       <MDBIcon fas icon="star" />
                       <MDBIcon fas icon="star" />
                       <MDBIcon fas icon="star" />
-                      <MDBIcon fas icon="star" />
-                      <MDBIcon fas icon="star" />
+                      <MDBIcon fas icon="star" /> */}
                     </div>
-                    <span>{getRandomInt(45)}</span>
+                    {/* <span>{getRandomInt(45)}</span> */}
                   </>
                 }
                 title={item.title}
@@ -123,17 +123,17 @@ export default function RecipeReviewCard() {
                     src={i.image}
                   ></Avatar>
                 ))}
-                <Badge bg="primary" text="bold">
+                 <Badge bg="primary" text="bold">
                   Links:
                 </Badge>
                 {item.links.map((o) => (
                   <IconButton
                     aria-label="settings"
                     sx={{
-                      border: 1,
+                      //border: 1,
                       //borderColor:"red",
-                      borderRadius: 2,
-                      backgroundColor: "#80deea",
+                      borderRadius: 50,
+                      //backgroundColor: "#80deea",
                     }}
                   >
                     {o.name === "Git" && (
@@ -143,12 +143,11 @@ export default function RecipeReviewCard() {
                     )}
                     {o.name === "Vercel" && (
                       <a href={o.linkVer}>
-                        <MDBIcon color="danger" fab icon="google" />
+                        <MDBIcon color="primary" fab icon="internet-explorer" />
                       </a>
                     )}
                   </IconButton>
                 ))}
-
                 <ExpandMore
                   expand={expanded}
                   onClick={handleExpandClick}

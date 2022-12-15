@@ -1,14 +1,11 @@
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { NavLink, Link } from "react-router-dom";
 import { IntlProvider, FormattedMessage } from "react-intl";
 import React, { Component, useRef } from "react";
-import I18n from '../../../context/i18n/I18n';
+//import I18n from '../../../context/i18n/I18n';
 import logo from '../../../assets/images/logo.jpg';
 import './Navbar.scss'
 
