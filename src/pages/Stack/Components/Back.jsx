@@ -27,14 +27,18 @@ const Back = ({ back }) => {
     <div>
       {isShown ? (
         <>
-          <h1> BACKEND</h1>
+          <h2> Backend</h2>
           <Grid
             container
             spacing={1}
-            sx={{ justifyContent: "center", display: "flex", marginTop: "40px" }}
+            sx={{
+              justifyContent: "center",
+              display: "flex",
+              marginTop: "40px",
+            }}
           >
             {back.map((item) => (
-              <Avatar src={item.image}></Avatar>
+              <Avatar sx={{ margin: 1 }} src={item.image}></Avatar>
             ))}
           </Grid>
         </>

@@ -1,49 +1,53 @@
-import {  Avatar, Stack, Card, CardContent, CardHeader, CardMedia, Grid } from '@mui/material';
-import { AvatarGroup } from '@mui/material';
-import React,{useState, useEffect} from 'react'
-import "./Stack.scss"
-const Front = ({front}) => {
-    const [isShown, setIsShown] = useState(false);
-   console.log(front,'frontis')
-    useEffect(() => {
-        const timeoutID = setTimeout(() => {
-          setIsShown(true);
-        }, 1000);
-    
-        return () => {
-          // 👇️ clear timeout when component unmounts
-          clearTimeout(timeoutID);
-        };
-      }, []);
+import {
+  Avatar,
+  Stack,
+  Card,
+  CardContent,
+  CardHeader,
+  CardMedia,
+  Grid,
+} from "@mui/material";
+import { AvatarGroup } from "@mui/material";
+import React, { useState, useEffect } from "react";
+import "./Stack.scss";
+const Front = ({ front }) => {
+  const [isShown, setIsShown] = useState(false);
+  console.log(front, "frontis");
+  useEffect(() => {
+    const timeoutID = setTimeout(() => {
+      setIsShown(true);
+    }, 1000);
+
+    return () => {
+      // 👇️ clear timeout when component unmounts
+      clearTimeout(timeoutID);
+    };
+  }, []);
   return (
     <div>
-    {isShown ? (
+      {isShown ? (
         <>
-      <h1>FRONTEND</h1>
-      <Grid
+          <h2>Frontend</h2>
+          <Grid
             container
             spacing={1}
-            sx={{ justifyContent: "center", display: "flex", marginTop: "40px" }}
+            sx={{
+              justifyContent: "center",
+              display: "flex",
+              marginTop: "40px",
+              marginBottom: "40px",
+            }}
           >
-      <AvatarGroup spacing={1} max={12}
-      sx={{ justifyContent: "center", display: "flex", marginTop:"20",marginBottom:"40px", flexWrap: "wrap" }}              
-      >
-        {front.map((item) => (
-          <Avatar
-                  sx={{border:0}}
-                    src={item.image}
-                  ></Avatar>
-        
-        ))}
-        </AvatarGroup>
-        </Grid>
-      </>   
-     
-    ) : (
-      <div></div>
-    )}
-  </div>
-  )
-}
+            {front.map((item) => (
+              <Avatar sx={{ margin: 1 }} src={item.image}></Avatar>
+            ))}
+          </Grid>
+        </>
+      ) : (
+        <div></div>
+      )}
+    </div>
+  );
+};
 
-export default Front
+export default Front;
