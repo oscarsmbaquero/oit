@@ -77,8 +77,11 @@ export default function SignUp() {
             component="form"
             onSubmit={sendMail}
             noValidate
-            sx={{ mt: 15 }}
+            sx={{ mt: 5 }}
           >
+         <Typography>
+          <p><FormattedMessage id="app.form"/></p>
+         </Typography> 
             <TextField 
               margin="normal"
               required

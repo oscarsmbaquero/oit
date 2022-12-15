@@ -9,5 +9,6 @@
     "app.send": "Mandar",
     "app.home": "Casa",
     "app.header": "Desenvolvedor Full Stack",    
-    "app.footer":"Conecte-se conosco nas redes sociais"
+    "app.footer":"Conecte-se conosco nas redes sociais",
+    "app.form":"Se você tiver alguma dúvida ou quiser mais informações. Por favor, envie-me uma mensagem"
     }
