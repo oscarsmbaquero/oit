@@ -10,7 +10,7 @@ import logo from "../../../assets/images/logo.jpg";
 import "./Navbar.scss";
 
 function OffcanvasExample() {
-  
+
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -20,7 +20,7 @@ function OffcanvasExample() {
 
   return (
     <>
-      {["md"].map((expand) => (
+      {["xs"].map((expand) => (
         <Navbar key={expand} bg="transparent" expand={expand} className="mb-3">
           <Container fluid>
             {/* <Navbar.Brand > <I18n /></Navbar.Brand> */}
