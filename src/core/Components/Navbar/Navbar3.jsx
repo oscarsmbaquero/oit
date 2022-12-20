@@ -10,6 +10,7 @@ import logo from "../../../assets/images/logo.jpg";
 import "./Navbar.scss";
 
 function OffcanvasExample() {
+  
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
