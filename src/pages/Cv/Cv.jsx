@@ -3,11 +3,13 @@ import cv from "../../assets/images/cv.jpg";
 import "./Cv.scss";
 //import IconoDescarga from "../../../src/assets/images/icon-house.svg";
 import IconoDescarga from "../../../src/assets/images/pdf.png";
+import confetti from 'canvas-confetti';
 
 const Cv = () => {
 
     //funcion para descargar pdf
     const onButtonClick = () => {
+        confetti()
         // using Java Script method to get PDF file
         fetch('Oscar Sánchez-Marín Baquero__CV.pdf').then(response => {
             response.blob().then(blob => {
