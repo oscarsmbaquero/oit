@@ -1,28 +1,16 @@
 import React from "react";
 import cv from "../../assets/images/cv.jpg";
 import "./Cv.scss";
-//import IconoDescarga from "../../../src/assets/images/icon-house.svg";
+import pdf from '../../PdfDownload/Oscar Sánchez-Marín Baquero___CV.pdf'
 import IconoDescarga from "../../../src/assets/images/pdf.png";
 import confetti from 'canvas-confetti';
 
 const Cv = () => {
 
     //funcion para descargar pdf
-    const onButtonClick = () => {
-        confetti()
-        // using Java Script method to get PDF file
-        fetch('Oscar Sánchez-Marín Baquero__CV.pdf').then(response => {
-            response.blob().then(blob => {
-                // Creating new object of PDF file
-                const fileURL = window.URL.createObjectURL(blob);
-                // Setting various property values
-                let alink = document.createElement('a');
-                alink.href = fileURL;
-                alink.download = 'Oscar Sánchez-Marín Baquero__CV.pdf';
-                alink.click();
-            })
-        })
-    }
+    // const onButtonClick = () => {
+    //     confetti()
+    // }
 
 
   return (
@@ -32,11 +20,14 @@ const Cv = () => {
       </div>
       <div className="nuevo-gasto">
         <figure>
-          <img 
+        <a href={pdf} target="_blank" rel="noopener noreferrer" download="Oscar Sanchez-Marin Baquero_cv.pdf"> 
+          <img
             src={IconoDescarga}
             alt="icono nuevo aviso"
-            onClick={onButtonClick}
+            //onClick={onButtonClick}
+            onClick={() => confetti()}
           />
+       </a>   
         </figure>
         {/* </Link> */}
       </div>
