@@ -34,7 +34,8 @@ const Back = ({ back }) => {
             sx={{
               justifyContent: "center",
               display: "flex",
-              marginTop: "40px",
+              //marginTop: "40px",
+              marginBottom: "40px",
             }}
           >
             {back.map((item) => (

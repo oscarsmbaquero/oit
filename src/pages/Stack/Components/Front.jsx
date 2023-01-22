@@ -1,13 +1,5 @@
-import {
-  Avatar,
-  Stack,
-  Card,
-  CardContent,
-  CardHeader,
-  CardMedia,
-  Grid,
-} from "@mui/material";
-import { AvatarGroup } from "@mui/material";
+import { Avatar, Grid } from "@mui/material";
+//import { AvatarGroup } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import "./Stack.scss";
 const Front = ({ front }) => {
@@ -34,7 +26,7 @@ const Front = ({ front }) => {
             sx={{
               justifyContent: "center",
               display: "flex",
-              marginTop: "40px",
+              //marginTop: "40px",
               marginBottom: "40px",
             }}
           >
