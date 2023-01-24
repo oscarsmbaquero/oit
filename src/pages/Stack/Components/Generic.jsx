@@ -16,7 +16,7 @@ import {
     useEffect(() => {
       const timeoutID = setTimeout(() => {
         setIsShown(true);
-      }, 3000);
+      }, 5000);
   
       return () => {
         // 👇️ clear timeout when component unmounts
@@ -38,7 +38,7 @@ import {
               }}
             >
               {generic.map((item) => (
-                <Avatar sx={{ margin: 1 }} src={item.image}></Avatar>
+                <Avatar sx={{ margin: 1 }} src={item.image} key={item.id}></Avatar>
               ))}
             </Grid>
           </>

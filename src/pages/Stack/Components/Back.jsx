@@ -39,7 +39,7 @@ const Back = ({ back }) => {
             }}
           >
             {back.map((item) => (
-              <Avatar sx={{ margin: 1 }} src={item.image}></Avatar>
+              <Avatar sx={{ margin: 1 }} src={item.image} key={item.id}></Avatar>
             ))}
           </Grid>
         </>

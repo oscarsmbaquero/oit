@@ -6,7 +6,7 @@ import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
-import Collapse from "@mui/material/Collapse";
+//import Collapse from "@mui/material/Collapse";
 import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
@@ -19,7 +19,9 @@ import Badge from "react-bootstrap/Badge";
 import { MDBIcon } from "mdb-react-ui-kit";
 import Aos from "aos";
 import "aos/dist/aos.css";
-const BASEURL = "https://62852cc03060bbd347460bff.mockapi.io/";
+//const BASEURL = "https://62852cc03060bbd347460bff.mockapi.io/";
+
+import { projects } from "../../assets/data.js";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -33,16 +35,16 @@ const ExpandMore = styled((props) => {
 }));
 
 export default function RecipeReviewCard() {
-  const [stack, setStack] = useState([]);
+  //const [stack, setStack] = useState([]);
   const [expanded, setExpanded] = React.useState(false);
 
-  useEffect(() => {
-    const fetchProjects = async () => {
-      const res = await axios.get(`${BASEURL}/oitStack`);
-      setStack(res.data);
-    };
-    fetchProjects();
-  }, []);
+  // useEffect(() => {
+  //   const fetchProjects = async () => {
+  //     const res = await axios.get(`${BASEURL}/oitStack`);
+  //     setStack(res.data);
+  //   };
+  //   fetchProjects();
+  // }, []);
 
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -50,14 +52,11 @@ export default function RecipeReviewCard() {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-  function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-  }
   return (
     <div data-aos="fade-up">
       <Grid container spacing={2}>
-        {stack.map((item) => (
-          <Grid item xs={12} md={6} lg={4}>
+        {projects.map((item) => (
+          <Grid item xs={12} md={6} lg={4} key={projects.id}>
             <Card
               elevation={5}
               sx={{
@@ -113,6 +112,7 @@ export default function RecipeReviewCard() {
                 </Badge>
                 {item.stack.map((i) => (
                   <Avatar
+                    key={i.id}
                     sx={{
                       width: 24,
                       height: 24,
@@ -123,11 +123,12 @@ export default function RecipeReviewCard() {
                     src={i.image}
                   ></Avatar>
                 ))}
-                 <Badge bg="primary" text="bold">
+                <Badge bg="primary" text="bold">
                   Links:
                 </Badge>
                 {item.links.map((o) => (
                   <IconButton
+                  key={o.id}
                     aria-label="settings"
                     sx={{
                       //border: 1,

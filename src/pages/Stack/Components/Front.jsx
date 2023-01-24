@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import "./Stack.scss";
 const Front = ({ front }) => {
   const [isShown, setIsShown] = useState(false);
-  console.log(front, "frontis");
+  //console.log(front, "frontis");
   useEffect(() => {
     const timeoutID = setTimeout(() => {
       setIsShown(true);
@@ -31,7 +31,7 @@ const Front = ({ front }) => {
             }}
           >
             {front.map((item) => (
-              <Avatar sx={{ margin: 1 }} src={item.image}></Avatar>
+              <Avatar sx={{ margin: 1 }} src={item.image} key={item.id}></Avatar>
             ))}
           </Grid>
         </>
