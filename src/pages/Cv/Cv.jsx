@@ -1,7 +1,7 @@
 import React from "react";
 import cv from "../../assets/images/cv.jpg";
 import "./Cv.scss";
-import pdf from '../../PdfDownload/Oscar Sánchez-Marín Baquero___CV.pdf'
+import pdf from '../../PdfDownload/Óscar Sánchez-Marín Baquero_CV.pdf'
 import IconoDescarga from "../../../src/assets/images/pdf.png";
 import confetti from 'canvas-confetti';
 
